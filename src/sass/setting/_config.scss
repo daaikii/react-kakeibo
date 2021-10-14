@@ -1,0 +1,33 @@
+//color
+$color:(
+  main:#fafafa,
+  unload:gray,
+  load:rgb(87, 209, 87),
+  mode:#0000ff,
+  danger:#f50057,
+  wh:#ffffff
+)!default;
+
+//backgroundimage
+$bgimg:url(https://source.unsplash.com/random);
+
+@mixin _col($c:main){
+  color:#{map-get($color,$c)}!important
+}
+
+@mixin _bgcol($c:main){
+  background-color:#{map-get($color,$c)}!important
+}
+
+//mediaquery
+$breakpoints:(
+  tb:(min-width:600px),//600までの画面サイズ
+  pc:(min-width:1280px),//1280までの画面サイズ
+  lg:(min-width:1600px),
+)!default;
+
+@mixin mq($breakpoint:tb){
+  @media screen and #{map-get($breakpoints,$breakpoint)}{
+    @content;
+  }
+}

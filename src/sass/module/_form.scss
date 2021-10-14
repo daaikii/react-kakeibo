@@ -1,0 +1,28 @@
+.form{
+  @include form;
+  text-align: center;
+  margin:50px auto ;
+  padding:10px;
+  width:400px;
+}
+.yform{
+  @include form;
+  text-align: center;
+  width:300px;
+  margin:0;
+  input{
+    outline:none;
+    border:none;
+    border-bottom:1px solid ;
+  }
+  buttun{
+    outline: none;
+  }
+  @include mq(tb){
+    width:200px;
+    margin-left: 20px;
+  }
+  @include mq(pc){
+    width:200px;
+  }
+}

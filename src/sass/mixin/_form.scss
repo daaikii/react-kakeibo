@@ -1,0 +1,72 @@
+@mixin form{
+  &-avatar{
+    margin:0.5em;
+    @include _bgcol(danger)
+  };
+  &-loadIcon{
+    @include _col(load);
+    cursor: pointer;
+  }
+  &-nomalIcon{
+    @include _col(unload);
+    cursor: pointer;
+  }
+  &-filebtn{
+    @extend %filebtn
+  }
+  &-form{
+    margin-top:0.5em;
+  };
+  &-reset{
+    cursor:pointer;
+    text-align: start
+  }
+  &-mode{
+    @include _col(mode);
+    cursor:pointer;
+  }
+  &-input{
+    display:block;
+    width:100%;
+    box-sizing: border-box;
+  }
+  &-table{
+    margin:0 auto;
+    input{
+      border:none;
+      border-bottom:1px solid;
+      outline:none;
+    }
+  }
+  &-button{
+    width:90%;
+    margin:1.5em 0em 1em !important;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    border-radius: 2px;
+    &:hover{
+      box-shadow:0px 2px 1px -1px rgba(0, 0, 0,  0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0,  0.1)
+    }
+  }
+  &-change{
+    width:20%;
+    margin:0px 10px 10px 0px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    border-radius: 2px;
+    &.plus{
+      &:hover{
+        background-color: #f08080;
+        box-shadow:0px 2px 1px -1px rgba(0, 0, 0,  0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0,  0.1)
+      };
+    }
+    &.minus{
+      &:hover{
+        background-color:#6495ed;
+        box-shadow:0px 2px 1px -1px rgba(0, 0, 0,  0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0,  0.1)
+      };
+    }
+  }
+}

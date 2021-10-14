@@ -1,0 +1,41 @@
+@mixin _table{
+  border-collapse:collapse;
+  font-family: Open Sans, sans-serif;
+  line-height: 1.25;
+  width: 20em;
+  @include mq(tb){
+    width:30em
+  }
+  @include mq(pc){
+    width:40em;
+  }
+  @include mq(lg){
+    width:40em;
+  }
+  th,td{
+    padding: .35em 1em;
+    border-bottom:  1px solid #eee;
+  }
+  tbody {
+    tr:hover{
+      background-color: #fffae9;
+    };
+    th{
+      text-align: center;
+      font-size: .8em;
+    }
+  }
+  thead th{
+    font-size: .85em;
+    padding: 1em;
+  }
+  
+  &-text{
+    text-align: center;
+    font-size: .75em;
+  }
+  &-price{
+    text-align: right;
+    font-weight: bold;
+  }
+}
